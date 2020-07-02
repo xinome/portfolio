@@ -1,0 +1,90 @@
+<ons-page ons-show="app.title = '記事'" ng-controller="pageTestCookpadController">
+  
+  
+  <div style="width:92%; margin:20px auto">
+    <h5>料理きろく</h5>
+    <!-- <hr>
+    <div style="display:flex; justify-content:space-between; margin:10px auto 30px">
+      <span>アサジョ</span>
+      <span>2019-02-20</span>
+    </div>
+    <img src="https://dl.dropboxusercontent.com/s/bvx7a6dvaacal9x/tmb_soccer01.png">
+    <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p> -->
+  </div>
+
+  <div>
+    <ons-row class="tac">
+      <ons-col width="14.2857%" style="border:1px solid #ccc">日</ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc">月</ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc">火</ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc">水</ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc">木</ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc">金</ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc">土</ons-col>
+    </ons-row>
+    <p>5月</p>
+    <ons-row id="calender_date" align="bottom">
+      <ons-col width="14.2857%" style="border:1px solid #ccc">
+        <span></span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col1" ng-click="myNavigator.pushPage('html/test_cookpad_detail.html', { animation: 'slide' })">
+        <span style="color: white">1</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc">
+        <span >2</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col2">
+        <span style="color: white">3</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col3">
+        <span style="color: white">4</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col4">
+        <span style="color: white">5</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc">
+        <span >6</span>
+      </ons-col>
+    </ons-row>
+    <ons-row id="calender_date" align="bottom">
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col1">
+        <span style="color: white">7</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col2">
+        <span style="color: white">8</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col3">
+        <span style="color: white">9</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col4">
+        <span style="color: white">10</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col1">
+        <span style="color: white">11</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col2">
+        <span style="color: white">12</span>
+      </ons-col>
+      <ons-col width="14.2857%" style="border:1px solid #ccc" class="calender_col3">
+        <span style="color: white">13</span>
+      </ons-col>
+    </ons-row>
+  </div>
+
+  <ons-bottom-toolbar>
+    <ons-row style="display:flex; justify-content:space-between; align-items:center;">
+      <ons-col width="50%">
+        <ons-back-button>
+          Back
+        </ons-back-button>
+      </ons-col>
+      <ons-col width="50%" style="text-align:right; padding-right:10px;">
+        <i class="far fa-heart"></i>　
+        <i class="fas fa-share-alt"></i>　
+        <i class="fas fa-ellipsis-h" ></i>
+      </ons-col>
+    </ons-row>
+  </ons-bottom-toolbar>
+
+</ons-page>
+

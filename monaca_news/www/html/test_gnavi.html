@@ -1,0 +1,286 @@
+<ons-page ons-show="app.title = 'ライブ'" ng-controller="pageTestGnaviController as page_live">
+
+  <!-- <ons-pull-hook ng-action="page_live.load($done)" var="loader_live">
+    <span ng-switch="loader_live.state">
+      <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> 引っ張って再読み込み</span>
+      <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> 指を離すと読み込みます</span>
+      <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon> 読み込み中...</span>
+    </span>
+  </ons-pull-hook> -->
+
+  <ons-toolbar>
+    <div class="left">
+      <ons-back-button>
+        Back
+      </ons-back-button>
+    </div>
+    <div class="center">
+      ぐるなび
+    </div>    
+  </ons-toolbar>
+
+  <div>
+    <ons-carousel var="gnavi_carousel_tab" id="gnavi_tab" class="menu_tab" swipeable auto-scroll overscrollable item-width="20%">
+      <ons-carousel-item class="tab_topic active" ng-click="tapCarouselTab(0)">トップ</ons-carousel-item>
+      <ons-carousel-item class="tab_entame" ng-click="tapCarouselTab(1)" centered>メニュー</ons-carousel-item>
+      <ons-carousel-item class="tab_sports" ng-click="tapCarouselTab(2)">貸切</ons-carousel-item>
+      <ons-carousel-item class="tab_topic" ng-click="tapCarouselTab(3)">写真</ons-carousel-item>
+      <ons-carousel-item class="tab_entame" ng-click="tapCarouselTab(4)">こだわり</ons-carousel-item>
+    </ons-carousel>
+
+    <ons-carousel var="gnavi_carousel_contents" id="gnavi_carousel" class="carousel_contents" ons-postchange="swipeCarouselContents($event.activeIndex)" fullscreen swipeable auto-scroll overscrollable>
+
+      <!-- トップ -->
+      <ons-carousel-item class="pt1">
+        <p class="tac">トップ</p>
+        
+        <ons-card class="card_home" ng-click="myNavigator.pushPage('html/post.html', { animation: 'slide' })">
+          <img src="https://dl.dropboxusercontent.com/s/bvx7a6dvaacal9x/tmb_soccer01.png">
+          <div class="content">
+            <div class="home_card_title">香川真司、ベジクタシュで待つ新たな11人の仲間。ライバルは強力、言わ…</div>
+            <div class="home_card_meta">フットボールチャンネル</div>
+          </div>
+        </ons-card>
+
+        <ons-card class="card_home" >
+          <div class="content">
+            <ons-row>
+              <ons-col width="65%">
+                <div class="home_card_title">年始のハワイ旅行に向けて、今年は節約！</div>
+                <div class="home_card_meta">楽天カード：グラフ</div>
+              </ons-col>
+              <ons-col width="30%" class="home_card_thumb">
+                <img src="https://dl.dropboxusercontent.com/s/wms12u0zorn77u1/tmb_soccer02.png">
+              </ons-col>
+            </ons-row>
+          </div>
+        </ons-card>
+
+        <ons-card class="card_home" >
+          <div class="content">
+            <ons-row>
+              <ons-col width="65%">
+                <div class="home_card_title">料理記録</div>
+                <div class="home_card_meta">Cookpad: カレンダー</div>
+              </ons-col>
+              <ons-col width="30%" class="home_card_thumb">
+                <img src="https://dl.dropboxusercontent.com/s/wms12u0zorn77u1/tmb_soccer02.png">
+              </ons-col>
+            </ons-row>
+          </div>
+        </ons-card>
+
+        <ons-card class="card_home" >
+          <div class="content">
+            <ons-row>
+              <ons-col width="65%">
+                <div class="home_card_title">【02/27限り】特売情報</div>
+                <div class="home_card_meta">Shufoo: チラシ</div>
+              </ons-col>
+              <ons-col width="30%" class="home_card_thumb">
+                <img src="https://dl.dropboxusercontent.com/s/wms12u0zorn77u1/tmb_soccer02.png">
+              </ons-col>
+            </ons-row>
+          </div>
+        </ons-card>
+
+        <ons-card class="card_home" >
+          <div class="content">
+            <ons-row>
+              <ons-col width="65%">
+                <div class="home_card_title">京橋のイタリアン・フレンチ特集</div>
+                <div class="home_card_meta">ぐるなび: 条件検索</div>
+              </ons-col>
+              <ons-col width="30%" class="home_card_thumb">
+                <img src="https://dl.dropboxusercontent.com/s/wms12u0zorn77u1/tmb_soccer02.png">
+              </ons-col>
+            </ons-row>
+          </div>
+        </ons-card>
+
+        <ons-card class="card_home" >
+          <div class="content">
+            <ons-row>
+              <ons-col width="65%">
+                <div class="home_card_title">香川真司、ベジクタシュで待つ新たな11人の仲間。ライバルは強力、言わ…</div>
+                <div class="home_card_meta">フットボールチャンネル</div>
+              </ons-col>
+              <ons-col width="30%" class="home_card_thumb">
+                <img src="https://dl.dropboxusercontent.com/s/wms12u0zorn77u1/tmb_soccer02.png">
+              </ons-col>
+            </ons-row>
+          </div>
+        </ons-card>
+
+      </ons-carousel-item>
+
+      <!-- メニュー -->
+      <ons-carousel-item class="pt2">
+        <ons-list>
+          <ons-list-item modifier="chevron" tappable>歓送迎会おすすめ</ons-list-item>
+          <ons-list-item modifier="chevron" tappable>一品料理</ons-list-item>
+          <ons-list-item modifier="chevron" tappable>お飲み物</ons-list-item>
+        </ons-list>
+
+      </ons-carousel-item>
+
+      <!-- 貸切 -->
+      <ons-carousel-item class="pt3">
+        <ons-list>
+          <ons-list-header>個室</ons-list-header>
+          <ons-list-item modifier="chevron" tappable>
+            <div class="left">
+              <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+            </div>
+            <div class="center">
+              <span class="list-item__title">宴会・女子会に</span>
+              <span class="list-item__subtitle">宴会個室<br>テーブル席 6名様まで</span>
+            </div>
+          </ons-list-item>
+          <ons-list-item modifier="chevron" tappable>
+            <div class="left">
+              <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+            </div>
+            <div class="center">
+              <span class="list-item__title">宴会・女子会に</span>
+              <span class="list-item__subtitle">宴会個室<br>テーブル席 6名様まで</span>
+            </div>
+          </ons-list-item>
+          <ons-list-item modifier="chevron" tappable>
+            <div class="left">
+              <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+            </div>
+            <div class="center">
+              <span class="list-item__title">宴会・女子会に</span>
+              <span class="list-item__subtitle">宴会個室<br>テーブル席 6名様まで</span>
+            </div>
+          </ons-list-item>
+
+          <ons-list-header>貸切</ons-list-header>
+          <ons-list-item modifier="chevron" tappable>
+            <div class="left">
+              <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+            </div>
+            <div class="center">
+              <span class="list-item__title">お店丸ごと貸切！</span>
+              <span class="list-item__subtitle">幹事様必見！駅近便利です<br>着席: 20～60名様</span>
+            </div>
+          </ons-list-item>
+
+        </ons-list>
+
+      </ons-carousel-item>
+
+      <!-- 写真 -->
+      <ons-carousel-item class="pt1">
+        
+        <div class="grid">
+          <div class="grid-sizer"></div>
+          <div class="grid-item grid-item--width1 grid-item--height2 flyer_bg1" ng-click="myNavigator.pushPage('html/test_shufoo_detail.html', { animation: 'slide' })">
+            <div class="flyer_layout">
+              <span style="position:absolute; bottom:0; left:10px">早生みかん</span>
+              <span style="position:absolute; bottom:0; right:10px">168円</span>
+            </div>
+          </div>
+          <div class="grid-item grid-item--width2 grid-item--height2 flyer_bg2">
+            <div class="flyer_layout">
+              <span style="position:absolute; bottom:30px; left:10px">牛肉肩ロース薄切り</span>
+              <span style="position:absolute; bottom:0; right:10px">188円</span>
+            </div>
+          </div>
+          <div class="grid-item flyer_bg3">
+            <div class="flyer_layout">
+              <span style="position:absolute; bottom:30px; left:10px">ブラックタイガーえび</span>
+              <span style="position:absolute; bottom:0; right:10px">39円</span>
+            </div>
+          </div>
+          <div class="grid-item grid-item--width2 grid-item--height4 flyer_bg4">
+            <div class="flyer_layout">
+              <span style="position:absolute; bottom:30px; left:10px">人気サラダ盛り合わせ</span>
+              <span style="position:absolute; bottom:0; right:10px">278円</span>
+            </div>
+          </div>
+          <div class="grid-item flyer_bg1">
+            <div class="flyer_layout">
+              <span style="position:absolute; bottom:30px; left:10px">早生みかん</span>
+              <span style="position:absolute; bottom:0; right:10px">168円</span>
+            </div>
+          </div>
+          <div class="grid-item flyer_bg2">
+            <div class="flyer_layout">
+              <span style="position:absolute; bottom:30px; left:10px">牛肉肩ロース薄切り</span>
+              <span style="position:absolute; bottom:0; right:10px">188円</span>
+            </div>
+          </div>
+          <div class="grid-item grid-item--height3 flyer_bg3">
+            <div class="flyer_layout">
+              <span style="position:absolute; bottom:30px; left:10px">ブラックタイガーえび</span>
+              <span style="position:absolute; bottom:0; right:10px">39円</span>
+            </div>
+          </div>
+
+        </div>
+
+      </ons-carousel-item>
+
+      <!-- こだわり -->
+      <ons-carousel-item class="pt2">
+        <ons-list>
+          <ons-list-item modifier="chevron" tappable>
+            <div class="left">
+              <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+            </div>
+            <div class="center">
+              <span class="list-item__title">宴会・女子会に</span>
+              <span class="list-item__subtitle">宴会個室<br>テーブル席 6名様まで</span>
+            </div>
+          </ons-list-item>
+          <ons-list-item modifier="chevron" tappable>
+            <div class="left">
+              <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+            </div>
+            <div class="center">
+              <span class="list-item__title">宴会・女子会に</span>
+              <span class="list-item__subtitle">宴会個室<br>テーブル席 6名様まで</span>
+            </div>
+          </ons-list-item>
+          <ons-list-item modifier="chevron" tappable>
+            <div class="left">
+              <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+            </div>
+            <div class="center">
+              <span class="list-item__title">宴会・女子会に</span>
+              <span class="list-item__subtitle">宴会個室<br>テーブル席 6名様まで</span>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </ons-carousel-item>
+
+    </ons-carousel>
+    
+  </div>
+
+  <ons-bottom-toolbar id="gnavi_bottom_toolbar">
+    <ons-row>
+      <ons-col width="25%" class="tac">
+        <i class="fas fa-phone" ></i><br>
+        <span>電話する</span>
+      </ons-col>
+      <ons-col width="25%" class="tac" style="color: red" ng-click="myNavigator.pushPage('html/test_gnavi_map.html', { animation: 'slide' })">
+        <i class="fas fa-map"></i><br>
+        <span>地図</span>
+      </ons-col>
+      <ons-col width="25%" class="tac">
+        <i class="fas fa-calendar-check"></i><br>
+        <span>ネット予約</span>
+      </ons-col>
+      <ons-col width="25%" class="tac">
+        <i class="fas fa-heart"></i><br>
+        <span>チョットぐ</span>
+      </ons-col>
+    </ons-row>
+  </ons-bottom-toolbar>
+
+</ons-page>
+
+

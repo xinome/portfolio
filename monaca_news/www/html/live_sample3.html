@@ -1,0 +1,83 @@
+<ons-page ons-show="app.title = 'ライブサンプル'" ng-controller="pageLiveSample3Controller" id="page_live">
+  
+  <ons-toolbar modifier="transparent">
+    <div class="left">
+      放送開始前
+    </div>
+    <div class="center">
+      ライブサンプル
+    </div>
+    <div class="right">
+      <ons-toolbar-button ng-click="myNavigator.popPage(); ">
+        <ons-icon icon="fa-times"></ons-icon>
+      </ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <img id="img_loading" src="image/icon_loader_a_gg_01_s1.gif">
+  <video id="live_video"  poster="" loop webkit-playsinline playsinline>
+    <!-- <source src="https://dl.dropboxusercontent.com/s/26bzot4saem88l3/MOV_1489.mp4"> -->
+    <source src="video/MOV_1489.mp4">
+  </video>
+  
+  <div id="comment_contents">
+    <ul id="comment_list">
+      <li>コメント</li>
+      <li>コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント</li>
+      <li>コメント</li>
+      <li>コメント</li>
+      <li>コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント</li>
+      <li>コメント</li>
+    </ul>
+  </div>
+
+  <ons-bottom-toolbar>
+    <ons-row style="display:flex; align-items:center; ">
+      <ons-col width="60%" style="padding-left:10px">
+        <ons-search-input placeholder="コメントする…" style="width:80%" id="comment_input"></ons-search-input>
+        <ons-button id="comment_btn" ng-click="sendComment()">
+          <i class="fas fa-comment"></i>
+        </ons-button>
+      </ons-col>
+      <ons-col width="20%" style="text-align:center; padding-right:10px;">
+        <!-- <i class="far fa-heart"></i>　
+        <i class="fas fa-share-alt"></i>　
+        <i class="fas fa-ellipsis-h" ></i> -->
+        
+        <div>31枚</div>
+      </ons-col>
+    </ons-row>
+  </ons-bottom-toolbar>
+
+  <ons-speed-dial position="bottom right" direction="up">
+    <ons-fab>
+      <ons-icon icon="md-share"></ons-icon>
+    </ons-fab>
+    <!-- <ons-speed-dial-item>
+      <ons-icon icon="fa-heart"></ons-icon>
+    </ons-speed-dial-item>
+    <ons-speed-dial-item>
+      <ons-icon icon="md-twitter"></ons-icon>
+    </ons-speed-dial-item> -->
+    <ons-speed-dial-item ng-click="myModal.show()">
+      <i class="fas fa-info-circle"></i>
+    </ons-speed-dial-item>
+    <ons-speed-dial-item>
+      <i class="fas fa-user"></i>
+    </ons-speed-dial-item>
+    <ons-speed-dial-item>
+      <i class="far fa-eye-slash" id="comment_toggle" ng-click="toggleComment()"></i>
+    </ons-speed-dial-item>
+  </ons-speed-dial>
+
+  <ons-modal var="myModal" direction="up">
+    <div style="text-align: center">
+      <p>
+        <ons-button ng-click="myModal.hide()">Hide modal</ons-button>
+      </p>
+    </div>
+  </ons-modal>
+
+</ons-page>
+
+

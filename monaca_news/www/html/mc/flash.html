@@ -1,0 +1,50 @@
+<ons-page ons-show="app.title = '速報記事'" ng-controller="pageFlashController">
+  
+  <ons-toolbar>
+    <div class="left">
+      <ons-back-button>
+        Back
+      </ons-back-button>
+    </div>
+    <div class="center">
+      速報記事
+    </div>    
+  </ons-toolbar>
+
+  <ons-list>
+    <ons-list-header>2019-02-12</ons-list-header>
+    <ons-list-item tappable ng-click="myNavigator.pushPage('html/mc/flash_post.html', { animation: 'slide' })">
+    <!-- <ons-list-item tappable onclick="alert('hoge')"> -->
+      <div class="content">
+        <ons-row>
+          <ons-col width="65%">
+            <div class="home_card_title">香川真司、ベジクタシュで待つ新たな11人の仲間。ライバルは強力、言わ…</div>
+            <div class="home_card_meta">フットボールチャンネル</div>
+          </ons-col>
+          <ons-col width="30%" class="home_card_thumb">
+            <img src="https://dl.dropboxusercontent.com/s/wms12u0zorn77u1/tmb_soccer02.png">
+          </ons-col>
+        </ons-row>
+      </div>
+    </ons-list-item>
+
+    <ons-list-header>2019-02-10</ons-list-header>
+    <ons-list-item tappable ng-click="myNavigator.pushPage('html/mc/flash_post.html', { animation: 'slide' })">
+    <!-- <ons-list-item tappable onclick="alert('hoge')"> -->
+      <div class="content">
+        <ons-row>
+          <ons-col width="65%">
+            <div class="home_card_title">香川真司、ベジクタシュで待つ新たな11人の仲間。ライバルは強力、言わ…</div>
+            <div class="home_card_meta">フットボールチャンネル</div>
+          </ons-col>
+          <ons-col width="30%" class="home_card_thumb">
+            <img src="https://dl.dropboxusercontent.com/s/wms12u0zorn77u1/tmb_soccer02.png">
+          </ons-col>
+        </ons-row>
+      </div>
+    </ons-list-item>
+
+  </ons-list>
+
+</ons-page>
+

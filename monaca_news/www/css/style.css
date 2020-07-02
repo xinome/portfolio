@@ -1,0 +1,383 @@
+/**/
+
+/* グロナビ */
+
+:checked + .tabbar__button {
+  color: #f39c12;
+}
+
+/* ons-pull-hook { margin-top: 0px; } */
+
+/* ons-bottom-toolbar ons-col.active {
+  color: #f39c12;
+}
+
+ons-bottom-toolbar .ft_icon {
+  font-size: 1.4em;
+}
+ons-bottom-toolbar .ft_name {
+  font-size: 0.5em;
+} */
+
+
+/* Util */
+
+.tac { text-align: center; }
+.tar { text-align: right; }
+
+.mt30 { margin-top: 30px; }
+
+/* ons-page { margin-top: 0; } */
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 画面: ホーム */
+
+.menu_tab {
+  height: 44px;
+}
+
+.menu_tab ons-carousel-item {
+  /* width: 100px !important; */
+  text-align: center;
+  padding-top: 11px;
+  /* border: 1px solid; */
+  border-radius: 12px 12px 0 0;
+}
+
+#home_tab ons-carousel-item {
+  font-weight: bold;
+}
+
+#home_tab ons-carousel-item.tab_topic {
+  color: #085078;
+}
+#home_tab ons-carousel-item.tab_topic.active {
+  background-color: #085078;
+  color: white;
+}
+
+#home_tab ons-carousel-item.tab_entame {
+  color: #373B44;
+}
+#home_tab ons-carousel-item.tab_entame.active {
+  background-color: #373B44;
+  color: white;
+}
+
+#home_tab ons-carousel-item.tab_sports {
+  color: #D38312;
+}
+#home_tab ons-carousel-item.tab_sports.active {
+  background-color: #D38312;
+  color: white;
+}
+
+
+.carousel_contents .ons-swiper-target {
+  height: auto;
+  /* overflow-y: auto; */
+}
+
+/* #home_carousel .ons-swiper-target > * {
+  max-height: 100vh;
+  overflow-y: auto;
+} */
+
+#home_carousel .pt1 {
+  background-color: #085078;
+}
+#home_carousel .pt2 {
+  background-color: #373B44;
+}
+#home_carousel .pt3 {
+  background-color: #D38312;
+}
+
+#home_carousel ons-carousel-item > p {
+  color: #fff;
+}
+
+.card_home ons-row{
+  justify-content: space-between;
+}
+
+.card_home img {
+  width: 100%;
+  height: auto;
+}
+
+.home_card_title {
+  font-weight: bold;
+  /* font-size: 0.8em; */
+}
+.home_card_meta {
+  color: #ccc;
+  font-size: 0.8em;
+}
+
+
+/* サンプル: 楽天カード */
+.rakuten_icon {
+  background-color: #ccc;
+  color:#666;
+  font-size: 1.5em;
+  padding: 8px;
+  border-radius: 8px;
+}
+.dtl_graph {
+  position: relative; /* IE is dumb */
+  width: 95%;
+  border: 1px solid #207870;
+  /* padding: 2px; */
+}
+.dtl_graph .bar {
+  display: block;
+  position: relative;
+  background: #409890;
+  text-align: center;
+  color: #f0ffff;
+  height: 2em;
+  line-height: 2em;
+}
+.dtl_graph .bar span { position: absolute; left: 1em; }
+
+.dtl_price {
+  width: 95%;
+  margin: 10px auto 0;
+  display:flex;
+  justify-content:space-between;
+}
+
+
+/* サンプル: Cookpad */
+#calender_date ons-col {
+  height: 70px;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#calender_date .calender_col1 {
+  background-image: url("../image/020Yama0629_TP_V4.jpg");
+}
+#calender_date .calender_col2 {
+  background-image: url("../image/ebisukakiIMGL7875_TP_V4.jpg");
+}
+#calender_date .calender_col3 {
+  background-image: url("../image/nichinanIMGL0049_TP_V4.jpg");
+}
+#calender_date .calender_col4 {
+  background-image: url("../image/stockhiroDSCF5438_TP_V4.jpg");
+}
+
+
+/* サンプル: shufoo */
+.grid {
+  background: #EEE;
+  max-width: 100%;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33%;
+}
+
+.grid-item {
+  height: 120px;
+  float: left;
+  /* background: #D26; */
+  border: 2px solid #fff;
+  /* border-color: hsla(0, 0%, 0%, 0.5); */
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  background-size: cover;
+}
+
+.grid-item--width1 { width:  100%; }
+.grid-item--width2 { width:  66%; }
+.grid-item--width3 { width:  60%; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+
+.flyer_bg1 {
+  background-image: url("../image/020Yama0629_TP_V4.jpg");
+  background-position-y: 5%;
+  color: white;
+}
+.flyer_bg2 {
+  background-image: url("../image/ebisukakiIMGL7875_TP_V4.jpg");
+  background-position-y: 25%;
+  color: red;
+}
+.flyer_bg3 {
+  background-image: url("../image/nichinanIMGL0049_TP_V4.jpg");
+  background-position-y: 50%;
+  color: yellow;
+}
+.flyer_bg4 {
+  background-image: url("../image/stockhiroDSCF5438_TP_V4.jpg");
+  background-position-y: 50%;
+  color: yellow;
+}
+
+.flyer_layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ggmap {
+  position: relative;
+  /* padding-bottom: 56.25%; */
+  padding-bottom: calc(100vh - 80px);
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+ 
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* サンプル: ぐるナビ */
+#gnavi_tab {
+  border-bottom: 1px solid #ccc;
+}
+
+#gnavi_tab ons-carousel-item.active {
+  border-bottom: 2px solid #f00;
+  color: #f00;
+}
+
+#gnavi_carousel .ons-swiper-target > * {
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+#gnavi_bottom_toolbar {
+  height: 49px;
+}
+
+#gnavi_bottom_toolbar ons-row {
+  padding: 5px;
+}
+
+#gnavi_bottom_toolbar ons-col i {
+  font-size: 1.2em;
+}
+#gnavi_bottom_toolbar ons-col span {
+  font-size: 0.7em;
+}
+
+
+/* 画面: 動画 */
+
+.c_meta {
+  margin: 10px auto;
+  align-items: center;
+}
+
+.c_meta ons-col:first-child span {
+  color: #f39c12;
+  border: 1px solid #f39c12;
+  border-radius: 14px;
+  padding: 8px;
+}
+
+
+/* 画面: ライブ */
+#page_live .page__content {
+  top: 0;
+  background-color: #000 !important;
+  /* background-image: url("../image/Yamasha181026099_TP_V4.jpg") !important; */
+  /* background-image: url("https://dl.dropboxusercontent.com/s/26bzot4saem88l3/MOV_1489.mp4") !important;
+  background-size: 100% auto !important; */
+}
+#page_live ons-toolbar * { color: #fff !important; }
+
+#live_video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+#img_loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#page_live #comment_contents {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  /* width: 70%; */
+  /* color: #fff; */
+
+  max-height: 40%;
+  overflow-y: auto;
+}
+
+#page_live #comment_contents_pt2 {
+  position: absolute;
+  left: 10px;
+  bottom: 40px;
+
+  max-height: 40%;
+  overflow-y: auto;
+}
+
+#page_live #comment_toggle_btn {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+
+}
+
+#page_live #comment_list {
+  width: 75%;
+
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+#page_live #comment_list li {
+  background-color: #fff;
+  padding: 5px 8px;
+  margin: 5px auto;
+  border-radius: 8px;
+  color: #000;
+}
+#page_live #comment_btn {
+  border-radius: 50%;
+  font-size: .8em;
+  line-height: 1.5em;
+  margin-top: 5px;
+  padding: 5px 8px;
+}
+

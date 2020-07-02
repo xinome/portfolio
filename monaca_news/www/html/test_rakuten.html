@@ -1,0 +1,75 @@
+<ons-page ons-show="app.title = '記事'" ng-controller="pageTestRakutenController">
+  
+  
+  <div style="background:white">
+    <h5>年始のハワイ旅行に向けて、今年は節約！</h5>
+    <hr>
+
+    <p class="tac">
+      総支出<br>
+      <span style="font-size:3em">￥323,000</span>
+    </p>
+    <div style="position:relative">
+      <canvas id="pie-chart-area" width="300" height="300"></canvas>
+      <div class="tac" style="position:absolute; bottom:40%; left:24%;">
+        2019<br>
+        <span style="font-size:3em">02</span>
+      </div>
+    </div>
+
+    <!-- 内訳 -->
+    <ons-list>
+      <ons-list-item>
+        <div class="left">
+          <div class="rakuten_icon">
+            <i class="fas fa-home"></i>
+          </div>
+        </div>
+        <div class="center">
+          <div class="dtl_graph">
+            <span class="bar" style="width: 36%;">36%</span>
+          </div>
+          <div class="dtl_price">
+            <span>住まい</span>
+            <span>￥100,000</span>
+          </div>
+        </div>
+      </ons-list-item>
+      <ons-list-item>
+        <div class="left">
+          <div class="rakuten_icon">
+            <i class="fas fa-home"></i>
+          </div>
+        </div>
+        <div class="center">
+          <div class="dtl_graph">
+            <span class="bar" style="width: 36%;">36%</span>
+          </div>
+          <div class="dtl_price">
+            <span>住まい</span>
+            <span>￥100,000</span>
+          </div>
+        </div>
+      </ons-list-item>
+    </ons-list>  
+    
+    
+  </div>
+
+  <ons-bottom-toolbar>
+    <ons-row style="display:flex; justify-content:space-between; align-items:center;">
+      <ons-col width="50%">
+        <ons-back-button>
+          Back
+        </ons-back-button>
+      </ons-col>
+      <ons-col width="50%" style="text-align:right; padding-right:10px;">
+        <i class="far fa-heart"></i>　
+        <i class="fas fa-share-alt"></i>　
+        <i class="fas fa-ellipsis-h" ></i>
+      </ons-col>
+    </ons-row>
+  </ons-bottom-toolbar>
+
+</ons-page>
+

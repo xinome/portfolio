@@ -1,0 +1,81 @@
+<ons-page ons-show="app.title = 'ライブ'" ng-controller="pageLiveController as page_live">
+
+  <ons-pull-hook ng-action="page_live.load($done)" var="loader_live">
+    <span ng-switch="loader_live.state">
+      <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> 引っ張って再読み込み</span>
+      <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> 指を離すと読み込みます</span>
+      <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon> 読み込み中...</span>
+    </span>
+  </ons-pull-hook>
+
+  <!-- <ons-toolbar>
+    <div class="center">My App - {{app.title}}</div>
+  </ons-toolbar> -->
+
+  <div >
+    <ons-card >
+      <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" ng-click="myNavigator.pushPage('html/live_sample.html', { animation: 'slide' })">
+      <div class="content">
+        <ons-row class="c_meta">
+          <ons-col width="50%"><span>2/8(金) 21:30～</span></ons-col>
+          <ons-col width="30%" class="tar" style="padding-right:0.5em">番組予約</ons-col>
+          <ons-col width="20%"><ons-switch ng-model="switch1"></ons-switch></ons-col>
+        </ons-row>
+        <div class="c_desc">
+          10万円争奪！ユーザー参加型ライブクイズ
+          <a href="" ng-click="exLinkCtrl('https://gunosy.com/')">グノシーQ</a><br><br>
+          ※ボタン押下でコメント表示制御　パターン1
+        </div>
+      </div>
+    </ons-card>
+
+    <ons-card >
+      <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" ng-click="myNavigator.pushPage('html/live_sample2.html', { animation: 'slide' })">
+      <div class="content">
+        <ons-row class="c_meta">
+          <ons-col width="50%"><span>2/8(金) 21:30～</span></ons-col>
+          <ons-col width="30%" class="tar" style="padding-right:0.5em">番組予約</ons-col>
+          <ons-col width="20%"><ons-switch ng-model="switch2"></ons-switch></ons-col>
+        </ons-row>
+        <div class="c_desc">
+          10万円争奪！ユーザー参加型ライブクイズ
+          <a href="" ng-click="exLinkCtrl('https://gunosy.com/')">グノシーQ</a><br><br>
+          ※ボタン押下でコメント表示制御　パターン2
+        </div>
+      </div>
+    </ons-card>
+
+    <ons-card >
+      <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" ng-click="myNavigator.pushPage('html/live_sample3.html', { animation: 'slide' })">
+      <div class="content">
+        <ons-row class="c_meta">
+          <ons-col width="50%"><span>2/8(金) 21:30～</span></ons-col>
+          <ons-col width="30%" class="tar" style="padding-right:0.5em">番組予約</ons-col>
+          <ons-col width="20%"><ons-switch ng-model="switch3"></ons-switch></ons-col>
+        </ons-row>
+        <div class="c_desc">
+          10万円争奪！ユーザー参加型ライブクイズ
+          <a href="" ng-click="exLinkCtrl('https://gunosy.com/')">グノシーQ</a>
+        </div>
+      </div>
+    </ons-card>
+
+    <ons-card >
+      <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" ng-click="myNavigator.pushPage('html/live_sample.html', { animation: 'slide' })">
+      <div class="content">
+        <ons-row class="c_meta">
+          <ons-col width="50%"><span>2/8(金) 21:30～</span></ons-col>
+          <ons-col width="30%" class="tar" style="padding-right:0.5em">番組予約</ons-col>
+          <ons-col width="20%"><ons-switch ng-model="switch4"></ons-switch></ons-col>
+        </ons-row>
+        <div class="c_desc">
+          10万円争奪！ユーザー参加型ライブクイズ
+          <a href="" ng-click="exLinkCtrl('https://gunosy.com/')">グノシーQ</a>
+        </div>
+      </div>
+    </ons-card>
+    
+  </div>
+
+</ons-page>
+

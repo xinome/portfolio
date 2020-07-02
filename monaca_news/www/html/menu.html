@@ -1,0 +1,41 @@
+<!-- <ons-navigator title="Navigator" var="myMenuNavigator"> -->
+
+  <ons-page ons-show="app.title = 'メニュー'" ng-controller="pageMenuController as page">
+    <div class="content" >
+      <p style="text-align: center; margin-top: 10px">
+        <ons-search-input placeholder="記事を検索" style="width:96%"></ons-search-input>
+      </p>
+
+      <ons-list>
+        <ons-list-item ng-click="myNavigator.pushPage('html/mc/prize.html', { animation: 'slide' })">
+          <div class="left"><ons-icon icon="fa-gift"></ons-icon></div>
+          <div class="center"><span class="list-item__title">獲得商品</span></div>
+        </ons-list-item>
+        <ons-list-item ng-click="myNavigator.pushPage('html/mc/divination.html', { animation: 'lift' })">
+          <div class="left"><ons-icon icon="md-star"></ons-icon></div>
+          <div class="center"><span class="list-item__title">占い</span></div>
+        </ons-list-item>
+        <ons-list-item ng-click="myNavigator.pushPage('html/mc/flash.html', { animation: 'slide' })">
+        <!-- <ons-list-item ng-click="page.load('html/mc/flash.html')"> -->
+          <div class="left"><ons-icon icon="fa-archive"></ons-icon></div>
+          <div class="center"><span class="list-item__title">速報記事一覧</span></div>
+        </ons-list-item>
+        <ons-list-item ng-click="myNavigator.pushPage('html/mc/prize.html', { animation: 'slide' })">
+          <div class="left"><ons-icon icon="md-desktop-windows"></ons-icon></div>
+          <div class="center"><span class="list-item__title">CM記事一覧</span></div>
+        </ons-list-item>
+        <ons-list-item ng-click="myNavigator.pushPage('html/mc/prize.html', { animation: 'slide' })">
+          <div class="left"><ons-icon icon="fa-question-circle"></ons-icon></div>
+          <div class="center"><span class="list-item__title">お問い合わせ</span></div>
+        </ons-list-item>
+        <ons-list-item ng-click="myNavigator.pushPage('html/mc/prize.html', { animation: 'slide' })">
+          <div class="left"><ons-icon icon="fa-info-circle"></ons-icon></div>
+          <div class="center"><span class="list-item__title">お知らせ</span></div>
+        </ons-list-item>
+      </ons-list>
+
+    </div>
+
+  </ons-page>
+
+<!-- </ons-navigator> -->

@@ -20,6 +20,6 @@
     },
     "devDependencies": {
         "browser-sync": "^3.0.4",
-        "cordova": "^7.1.0"
+        "cordova": "^13.0.0"
     }
 }
